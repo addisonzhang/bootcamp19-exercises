@@ -16,3 +16,17 @@ const getUser = callback => {
   };
   callback(user);
 };
+
+function tossCoin(user) {
+  coinToss(user.guess, printMsg);
+}
+
+function printMsg(win) {
+  if(win) {
+    console.log("Your guess is correct");
+  } else {
+    console.log("Your guess is incorrect");
+  }
+}
+
+getUser(tossCoin);
