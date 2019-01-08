@@ -54,5 +54,6 @@ googleMapsClient.findPlace(address).asPromise()
                 console.log(`${address.input} is located at coordinates (${location.lat}, ${location.lng}), at the address ${formatted_address}.`);
             });
         }
-    }    
-);
+    })
+    .catch((err) => {console.log(err);
+    });
